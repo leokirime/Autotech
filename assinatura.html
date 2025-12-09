@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Carros por Assinatura - Classificados de Veículos</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <h1>Classificados de Veículos</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="vendas.html">Carros</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Filtro de busca para assinatura -->
+    <section id="filtro-assinatura">
+        <div class="container">
+            <h2>Buscar Carros para Assinaturas</h2>
+            <form>
+                <div class="form-group">
+                    <label for="marca">Marca:</label>
+                    <input type="text" id="marca" name="marca" placeholder="Ex: Toyota">
+                </div>
+
+                <div class="form-group">
+                    <label for="modelo">Modelo:</label>
+                    <input type="text" id="modelo" name="modelo" placeholder="Ex: Corolla">
+                </div>
+
+                <div class="form-group">
+                    <label for="ano">Ano:</label>
+                    <input type="number" id="ano" name="ano" placeholder="Ex: 2020">
+                </div>
+
+                <div class="form-group">
+                    <label for="valor">Valor Mensal (R$):</label>
+                    <input type="number" id="valor" name="valor" placeholder="Ex: 2.200">
+                </div>
+
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Lista de carros por assinatura -->
+    <main>
+        <section id="lista-assinaturas">
+            <div class="container">
+                <h2>Veículos Disponíveis para Assinatura</h2>
+                <div class="veiculos-grid">
+                    <!-- Veículo 1 -->
+                    <article class="veiculo-card">
+                        <img src="https://via.placeholder.com/250x150" alt="Fiat Argo">
+                        <div class="veiculo-info">
+                            <h3>Fiat Argo</h3>
+                            <p>Ano: 2022</p>
+                            <p>Valor Mensal: R$ 1.500</p>
+                            <a 
+                                href="https://api.whatsapp.com/send?phone=5511985166121&text=Olá,%20tenho%20interesse%20em%20assinar%20o%20Fiat%20Argo%20de%202022." 
+                                target="_blank" 
+                                class="btn-whatsapp"
+                            >
+                                Negociar pelo WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Veículo 2 -->
+                    <article class="veiculo-card">
+                        <img src="https://via.placeholder.com/250x150" alt="Volkswagen T-Cross">
+                        <div class="veiculo-info">
+                            <h3>Volkswagen T-Cross</h3>
+                            <p>Ano: 2021</p>
+                            <p>Valor Mensal: R$ 2.000</p>
+                            <a 
+                                href="https://api.whatsapp.com/send?phone=5511985166121&text=Olá,%20tenho%20interesse%20em%20assinar%20o%20Volkswagen%20T-Cross%20de%202021." 
+                                target="_blank" 
+                                class="btn-whatsapp"
+                            >
+                                Negociar pelo WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Veículo 3 -->
+                    <article class="veiculo-card">
+                        <img src="https://via.placeholder.com/250x150" alt="Honda HR-V">
+                        <div class="veiculo-info">
+                            <h3>Honda HR-V</h3>
+                            <p>Ano: 2022</p>
+                            <p>Valor Mensal: R$ 2.800</p>
+                            <a 
+                                href="https://api.whatsapp.com/send?phone=5511985166121&text=Olá,%20tenho%20interesse%20em%20assinar%20o%20Honda%20HR-V%20de%202022." 
+                                target="_blank" 
+                                class="btn-whatsapp"
+                            >
+                                Negociar pelo WhatsApp
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Classificados de Veículos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./Js/assinatura.js"></script>
+</body>
+</html>

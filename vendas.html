@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Carros à Venda - Classificados de Veículos</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <h1>Classificados de Veículos</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="assinatura.html">Assinatura</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Filtro de busca para carros à venda -->
+    <section id="filtro-venda">
+        <div class="container">
+            <h2>Buscar Carros à Venda</h2>
+            <form>
+                <div class="form-group">
+                    <label for="marca">Marca:</label>
+                    <input type="text" id="marca" name="marca" placeholder="Ex:Chevrolet">
+                </div>
+
+                <div class="form-group">
+                    <label for="modelo">Modelo:</label>
+                    <input type="text" id="modelo" name="modelo" placeholder="Ex: Cobalt">
+                </div>
+
+                <div class="form-group">
+                    <label for="ano">Ano:</label>
+                    <input type="number" id="ano" name="ano" placeholder="Ex: 2015">
+                </div>
+
+                <div class="form-group">
+                    <label for="preco">Preço Máximo (R$):</label>
+                    <input type="number" id="preco" name="preco" placeholder="Ex: 50.000">
+                </div>
+
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Lista de carros à venda -->
+    <main>
+        <section id="lista-venda">
+            <div class="container">
+                <h2>Veículos Disponíveis</h2>
+                <div class="veiculos-grid">
+                    <!-- Veículo 1 -->
+                    <article class="veiculo-card">
+                        <img src="https://via.placeholder.com/250x150" alt="Hilux">
+                        <div class="veiculo-info">
+                            <h3>Toyota Hilux</h3>
+                            <p>Ano: 2020</p>
+                            <p>Preço: R$ 90.000</p>
+                            <a 
+                                href="https://api.whatsapp.com/send?phone=5511985166121&text=Olá,%20tenho%20interesse%20no%20Toytota%20Hilux%20de%202020." 
+                                target="_blank" 
+                                class="btn-whatsapp"
+                            >
+                                Negociar pelo WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Veículo 2 -->
+                    <article class="veiculo-card">
+                        <img src="https://via.placeholder.com/250x150" alt="Honda Civic">
+                        <div class="veiculo-info">
+                            <h3>Honda Civic</h3>
+                            <p>Ano: 2019</p>
+                            <p>Preço: R$ 70.000</p>
+                            <a 
+                                href="https://api.whatsapp.com/send?phone=5511985166121&text=Olá,%20tenho%20interesse%20no%20Honda%20Civic%20de%202019." 
+                                target="_blank" 
+                                class="btn-whatsapp"
+                            >
+                                Negociar pelo WhatsApp
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Classificados de Veículos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./Js/vendas.js"></script>
+</body>
+</html>
