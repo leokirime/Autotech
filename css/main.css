@@ -23,16 +23,16 @@ body {
    CABEÇALHO
 ========================================= */
 header {
-    background-color: #000000; /* preto */
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 20px 0;
     margin-bottom: 30px;
-    border-bottom: 3px solid #7b1fa2; /* detalhe roxo */
+    border-bottom: 3px solid #b0b0b0;
 }
 
 header h1 {
     text-align: center;
     font-size: 2rem;
-    color: #ffffff;
+    color: #404040;
 }
 
 header nav ul {
@@ -48,7 +48,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #ffffff;
+    color: #606060;
     text-decoration: none;
     font-weight: bold;
     padding-bottom: 4px;
@@ -56,25 +56,28 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #7b1fa2;
-    border-bottom: 2px solid #7b1fa2;
+    color: #404040;
+    border-bottom: 2px solid #808080;
 }
 
 /* =========================================
    CARDS (venda, assinatura etc)
 ========================================= */
 .veiculo-card {
-    background-color: #f8f8f8;
-    border: 2px solid #7b1fa2;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
     padding: 20px;
     transition: 0.3s;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(176, 176, 176, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .veiculo-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 20px rgba(123, 31, 162, 0.3);
+    border-color: #808080;
+    box-shadow: 0 15px 40px rgba(128, 128, 128, 0.4);
 }
 
 .veiculo-card img {
@@ -84,12 +87,12 @@ header nav ul li a:hover {
 }
 
 .veiculo-info h3 {
-    color: #7b1fa2;
+    color: #404040;
     margin-bottom: 10px;
 }
 
 .veiculo-info p {
-    color: #000000;
+    color: #606060;
     margin-bottom: 6px;
 }
 
@@ -107,18 +110,20 @@ header nav ul li a:hover {
    FORMULÁRIOS
 ========================================= */
 form {
-    background-color: #f8f8f8;
+    background: rgba(255, 255, 255, 0.25);
     padding: 25px;
-    border-radius: 12px;
-    border: 2px solid #7b1fa2;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
     margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 form label {
     font-weight: bold;
     margin-bottom: 5px;
     display: block;
-    color: #000000;
+    color: #404040;
 }
 
 form input,
@@ -127,16 +132,16 @@ form select {
     width: 100%;
     padding: 12px;
     border-radius: 8px;
-    border: 1px solid #7b1fa2;
-    background-color: #ffffff;
-    color: #000000;
+    border: 1px solid #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #404040;
     margin-bottom: 15px;
 }
 
 form button {
     width: 100%;
     padding: 12px;
-    background-color: #7b1fa2;
+    background-color: #808080;
     color: #ffffff;
     font-weight: bold;
     border: none;
@@ -146,7 +151,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #4a0072;
+    background-color: #606060;
 }
 
 /* =========================================
@@ -155,7 +160,7 @@ form button:hover {
 .btn-whatsapp {
     display: inline-block;
     padding: 12px 18px;
-    background-color: #450085;
+    background-color: #808080;
     color: #fff;
     border-radius: 8px;
     text-decoration: none;
@@ -165,7 +170,7 @@ form button:hover {
 }
 
 .btn-whatsapp:hover {
-    background-color: #8a32f0;
+    background-color: #606060;
 }
 
 /* =========================================
@@ -174,17 +179,185 @@ form button:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #000000;
-    color: #7b1fa2;
+    background-color: rgba(160, 160, 160, 0.85);
+    color: #ffffff;
     margin-top: 50px;
-    border-top: 3px solid #7b1fa2;
+    border-top: 3px solid #b0b0b0;
 }
 
 /* =========================================
    RESPONSIVO
 ========================================= */
-@media (max-width: 600px) {
+
+/* Tablets e telas pequenas */
+@media (max-width: 768px) {
     header h1 {
         font-size: 1.5rem;
+    }
+
+    header nav ul {
+        gap: 15px;
+    }
+
+    header nav ul li {
+        margin: 8px 12px;
+    }
+
+    .veiculos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+    .veiculo-card {
+        padding: 15px;
+    }
+
+    .veiculo-info h3 {
+        font-size: 1rem;
+    }
+
+    .veiculo-info p {
+        font-size: 0.9rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form label {
+        font-size: 0.95rem;
+    }
+
+    form input,
+    form textarea,
+    form select {
+        padding: 10px;
+    }
+
+    form button {
+        padding: 10px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header nav ul {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    header nav ul li a {
+        padding: 8px;
+        display: block;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .veiculos-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .veiculo-card {
+        padding: 12px;
+        border-radius: 15px;
+    }
+
+    .veiculo-info h3 {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .veiculo-info p {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+
+    form {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    form label {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    form input,
+    form textarea,
+    form select {
+        padding: 10px;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    form button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .btn-whatsapp {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    header nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    .veiculos-grid {
+        gap: 10px;
+    }
+
+    .veiculo-card {
+        padding: 10px;
+    }
+
+    .veiculo-info h3 {
+        font-size: 0.85rem;
+    }
+
+    .veiculo-info p {
+        font-size: 0.75rem;
+    }
+
+    form {
+        padding: 12px;
+    }
+
+    form input,
+    form textarea,
+    form select {
+        padding: 8px;
+        font-size: 0.85rem;
     }
 }
